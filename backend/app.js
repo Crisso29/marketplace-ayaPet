@@ -1,4 +1,5 @@
 
+import cors from 'cors';
 import express from 'express';
 
 
@@ -22,6 +23,9 @@ import productRoutes from './src/interfaces/http/routes/productRoutes.js';
 
 const app = express();
 
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+}));
 // Middleware
 app.use(express.json());
 
