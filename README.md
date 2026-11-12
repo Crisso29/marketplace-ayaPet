@@ -1,9 +1,7 @@
-# marketplace-ayaPet  🐾
 
+# ayaPet 🐾
 
-
-
-## Sistema web para la gestión de productos de una tienda de mascotas
+### Sistema web para la gestión de productos de una tienda de mascotas
 
 ## 1. Descripción del proyecto
 
@@ -103,11 +101,17 @@ Para ejecutar el proyecto se necesita tener instalado:
 
 ## 8. Instalación y configuración
 
-### 8.1 Clonar o descargar el proyecto
+### 8.1. Clonar o descargar el proyecto
 
-Ubicarse en la carpeta donde se guardará el proyecto y descargar el repositorio.
+Clonar el repositorio desde GitHub:
 
-### 8.2 Configurar el backend
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+Ingresar a la carpeta del proyecto y luego a `backend`.
+
+### 8.2. Instalar las dependencias
 
 Abrir una terminal dentro de la carpeta `backend` y ejecutar:
 
@@ -115,7 +119,7 @@ Abrir una terminal dentro de la carpeta `backend` y ejecutar:
 npm install
 ```
 
-### 8.3 Configurar las variables de entorno
+### 8.3. Configurar las variables de entorno
 
 Crear un archivo `.env` dentro de la carpeta `backend` con los datos de conexión a PostgreSQL:
 
@@ -127,9 +131,11 @@ DB_USER=postgres
 DB_PASSWORD=TU_CONTRASEÑA
 ```
 
-Reemplazar `TU_CONTRASEÑA` por la contraseña configurada en PostgreSQL. No compartir ni subir este archivo al repositorio.
+Reemplazar `TU_CONTRASEÑA` por la contraseña configurada en PostgreSQL.
 
-### 8.4 Crear la base de datos
+**Importante:** el archivo `.env` contiene información de conexión y no debe compartirse ni subirse al repositorio.
+
+### 8.4. Crear la base de datos
 
 En PostgreSQL, crear una base de datos llamada:
 
@@ -143,7 +149,7 @@ También se deben registrar las categorías iniciales para poder asociarlas a lo
 
 ## 9. Ejecución del proyecto
 
-### 9.1 Iniciar el backend
+### 9.1. Iniciar el backend
 
 Desde la carpeta `backend`, ejecutar:
 
@@ -155,7 +161,7 @@ El backend estará disponible en:
 
 http://localhost:3000
 
-### 9.2 Abrir el frontend
+### 9.2. Abrir el frontend
 
 Abrir la carpeta `frontend` en Visual Studio Code y ejecutar `index.html` utilizando Live Server.
 
@@ -169,15 +175,17 @@ http://localhost:3000/api-docs/
 
 La documentación se encuentra desarrollada utilizando Swagger UI y OpenAPI.
 
+Esta dirección estará disponible mientras el backend se encuentre en ejecución.
+
 ## 11. Pruebas de software
 
 Durante el desarrollo se utilizaron diferentes herramientas para comprobar el funcionamiento del sistema.
 
-### Jest
+### 11.1. Jest
 
 Se utilizó para realizar pruebas unitarias de la entidad Product y verificar sus reglas de validación.
 
-En las pruebas realizadas se obtuvo una cobertura del 100 % en el archivo Product.js.
+En las pruebas realizadas se obtuvo una cobertura del 100 % en el archivo `Product.js`.
 
 Para ejecutar las pruebas:
 
@@ -185,11 +193,11 @@ Para ejecutar las pruebas:
 npm test -- --coverage
 ```
 
-### Postman
+### 11.2. Postman
 
 Se utilizó para probar los endpoints de la API REST, verificando las operaciones de registro, consulta, actualización y eliminación de productos, así como las respuestas del backend.
 
-### k6
+### 11.3. k6
 
 Se utilizará para evaluar el rendimiento de la API mediante pruebas de carga, observando los tiempos de respuesta y el comportamiento del sistema ante varias solicitudes.
 
@@ -198,6 +206,18 @@ Los resultados de estas pruebas se documentarán en el apartado de evaluación d
 ## 12. Documentación de arquitectura
 
 En la carpeta `docs/architecture/` se encuentran los documentos elaborados durante el desarrollo de ayaPet. Estos permiten conocer cómo se organizó el sistema, qué decisiones se tomaron y cómo se relacionan sus componentes.
+
+Entre los documentos de arquitectura se consideran:
+
+- Diagrama de contexto.
+- Diagrama de contenedores.
+- Diagrama de componentes.
+- Diagrama de código.
+- Diagrama de despliegue.
+- Diagrama de secuencia para el registro de productos.
+- Drivers arquitectónicos.
+- Evaluación de atributos de calidad.
+- Architecture Decision Records (ADR).
 
 ## 13. Alcance del proyecto
 
